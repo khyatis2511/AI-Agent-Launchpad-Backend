@@ -1,17 +1,20 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.ts",
-        "use": "@vercel/node",
-        "config": { "includeFiles": ["dist/**", ".env"] }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "server.ts"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.ts",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**", ".env"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.ts"
+    }
+  ],
+  "commands": {
+    "build": "npm run build"
   }
+}
   
