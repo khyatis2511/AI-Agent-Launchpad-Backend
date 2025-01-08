@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(sessionMiddleware)
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://ai-agent-launchpad-frontend.vercel.app/"],
+  origin: ["http://localhost:3000", "https://ai-agent-launchpad-frontend.vercel.app"],
   credentials: true,
 }));
 
