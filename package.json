@@ -1,11 +1,11 @@
 {
   "name": "ai-agent-launchpad-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node dist/server.js",
     "dev": "nodemon server.ts",
-    "build": "tsc -p .",
+    "build": "tsc -p . && prisma generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
