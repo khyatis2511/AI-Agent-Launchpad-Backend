@@ -26,9 +26,11 @@ app.use('/ai/v1/user', applyUserRoutes(router));
 app.use('/ai/v1/agent', applyAgentRoutes(router));
 
 app.get('/', (req, res) => {
-  res.json('hello word').end();
+  res.send('hello word')
 })
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export default app;
