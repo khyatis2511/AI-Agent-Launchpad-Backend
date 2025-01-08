@@ -16,6 +16,7 @@ const router = express.Router();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.enable('trust proxy')
 app.set('trust proxy', 1); 
 app.use(sessionMiddleware)
 

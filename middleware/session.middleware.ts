@@ -6,8 +6,10 @@ dotenv.config();
 
 const sessionMiddleware = session({
   secret: process.env.SESSION_SECRET ?? "secret",
-  resave: true,
-  saveUninitialized: false,
+  resave: false,
+  saveUninitialized: true,
+  proxy: true,
+  name: 'MyCoolWebAppCookieName', 
   store: MongoStore.create({
     mongoUrl: process.env.DATABASE_URL
   }),
