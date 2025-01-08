@@ -12,7 +12,6 @@
       "src": "/(.*)",
       "dest": "server.ts"
     }
-  ],
-  "buildCommand":  "npm run build"
+  ]
 }
   

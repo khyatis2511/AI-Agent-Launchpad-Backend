@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
+    "postinstall": "prisma generate",
     "start": "node dist/server.js",
     "dev": "nodemon server.ts",
     "build": "rimraf dist && tsc -p . && prisma generate",
