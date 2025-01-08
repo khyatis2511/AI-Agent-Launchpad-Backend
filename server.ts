@@ -18,12 +18,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(sessionMiddleware)
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000", "https://ai-agent-launchpad-frontend.vercel.app/"],
   credentials: true,
 }));
 
 app.use('/ai/v1/user', applyUserRoutes(router));
 app.use('/ai/v1/agent', applyAgentRoutes(router));
+
+app.get('/', (req, res) => {
+  res.json('hello word').end();
+})
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
