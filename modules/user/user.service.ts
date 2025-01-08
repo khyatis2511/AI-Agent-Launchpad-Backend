@@ -72,7 +72,7 @@ const user = {
   logout: async (req: Request, res: Response) => {
     req.session.destroy((err) => {
       if (err) return returnRes(500, msgs.logoutFailed);
-      res.clearCookie("connect.sid");
+      res.clearCookie("aiagent.id");
       return returnRes(200, msgs.loggedOut);
     });
   },

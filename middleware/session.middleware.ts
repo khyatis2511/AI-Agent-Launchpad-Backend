@@ -9,7 +9,7 @@ const sessionMiddleware = session({
   resave: false,
   saveUninitialized: true,
   proxy: true,
-  name: 'MyCoolWebAppCookieName', 
+  name: 'aiagent.id', 
   store: MongoStore.create({
     mongoUrl: process.env.DATABASE_URL
   }),
